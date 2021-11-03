@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WyWReader</string>
     <string name="file_list">All files</string>
+    <string name="add_button_description">Add book button</string>
 </resources>
