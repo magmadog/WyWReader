@@ -3,4 +3,11 @@
     <string name="app_name">WyWReader</string>
     <string name="file_list">Все файлы</string>
     <string name="add_button_description">Кнопка добавления книги</string>
+    <string name="title_activity_file_manager">Файловый Менеджер</string>
+    <string name="search_book">Поиск книг</string>
+    <string name="read_book">Читать</string>
+    <string name="title">Название книги</string>
+    <string name="author">Автор</string>
+    <string name="add_book">Добавить книгу</string>
+    <string name="book_preview_description">Обложка последней открытой книги</string>
 </resources>

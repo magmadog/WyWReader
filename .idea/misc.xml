@@ -4,10 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/WyWReader/app/src/main/res/layout/activity_book.xml" value="0.14427083333333332" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/activity_book_viewer.xml" value="0.10260416666666666" />
         <entry key="..\:/Android/WyWReader/app/src/main/res/layout/activity_books.xml" value="0.25" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/activity_pdf.xml" value="0.10260416666666666" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/activity_pdf_view.xml" value="0.1" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/book_list_item.xml" value="0.21693840579710144" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/book_viewer.xml" value="0.10260416666666666" />
         <entry key="..\:/Android/WyWReader/app/src/main/res/layout/file_list_item.xml" value="0.1" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/file_manager_activity.xml" value="0.2028985507246377" />
         <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_book_list.xml" value="0.14375" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_current_book.xml" value="0.23143115942028986" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_file_manager.xml" value="0.264" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_nav_menu.xml" value="0.10260416666666666" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_search_book.xml" value="0.4" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/layout/fragment_settings.xml" value="0.536" />
         <entry key="..\:/Android/WyWReader/app/src/main/res/layout/list_item_book.xml" value="0.1" />
+        <entry key="..\:/Android/WyWReader/app/src/main/res/xml/provider_paths.xml" value="0.21693840579710144" />
       </map>
     </option>
   </component>

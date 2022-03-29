@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.sarbaevartur.android.wywreader.SearchBookFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <fragment
+        android:id="@+id/CurrentBookFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.sarbaevartur.android.wywreader.CurrentBookFragment"
+        app:layout_constraintTop_toBottomOf="@id/SearchFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <fragment
+        android:id="@+id/file_manager_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.sarbaevartur.android.wywreader.FileManagerFragment"
+        app:layout_constraintTop_toBottomOf="@id/CurrentBookFragment"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addBookButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/add_book_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:contentDescription="@string/add_button_description"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-</FrameLayout>
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

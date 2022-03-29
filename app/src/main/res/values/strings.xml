@@ -2,4 +2,11 @@
     <string name="app_name">WyWReader</string>
     <string name="file_list">All files</string>
     <string name="add_button_description">Add book button</string>
+    <string name="title_activity_file_manager">FileManager</string>
+    <string name="search_book">Search book</string>
+    <string name="read_book">Read</string>
+    <string name="title">Book title</string>
+    <string name="author">Author</string>
+    <string name="add_book">Add book</string>
+    <string name="book_preview_description">This is the cover of the last open book.</string>
 </resources>
