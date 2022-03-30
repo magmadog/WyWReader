@@ -3,19 +3,22 @@ package com.sarbaevartur.android.wywreader
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.io.File
 
 private const val TAG = "MainActivity"
 private const val REQUEST_PATH = 123
@@ -30,8 +33,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
 
-        hideKeyboard(this)
-
         val recyclerView: RecyclerView = findViewById(R.id.recyclerview_books)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = BookRecyclerViewAdapter(fillList())
@@ -39,23 +40,22 @@ class MainActivity : AppCompatActivity() {
         currentBookFragment = findViewById(R.id.CurrentBookFragment)
         currentBookFragment.visibility = View.GONE
 
+        val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                val filename = data?.data
+                val file = File("$filename")
+                Log.d(TAG, file.readText())
+            }
+        }
+
         addButton = findViewById(R.id.add_book_button)
         addButton.setOnClickListener{
-            val intent = Intent(this, BookViewer::class.java)
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.type = ""
+            intent.categories
+            resultLauncher.launch(intent)
         }
-    }
-
-    fun hideKeyboard(activity: Activity) {
-        //Находим View с фокусом, так мы сможем получить правильный window token
-        //Если такого View нет, то создадим одно, это для получения window token из него
-        val view = activity.currentFocus ?: View(activity)
-        val inputMethod =
-            activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethod.hideSoftInputFromWindow(
-            view.windowToken,
-            InputMethodManager.SHOW_IMPLICIT
-        )
     }
 
     private fun fillList(): List<String> {

@@ -10,4 +10,8 @@
     <string name="author">Автор</string>
     <string name="add_book">Добавить книгу</string>
     <string name="book_preview_description">Обложка последней открытой книги</string>
+    <string-array name="search_spaces">
+        <item>на устройстве</item>
+        <item>в интернете</item>
+    </string-array>
 </resources>

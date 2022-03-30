@@ -9,4 +9,8 @@
     <string name="author">Author</string>
     <string name="add_book">Add book</string>
     <string name="book_preview_description">This is the cover of the last open book.</string>
+    <string-array name="search_spaces">
+        <item>device</item>
+        <item>internet</item>
+    </string-array>
 </resources>
